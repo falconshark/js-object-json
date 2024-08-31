@@ -5,7 +5,7 @@ A Web tool for convert Javascript object to JSON
 Just for myself to covert some Javascript object to JSON format without using CLI.
 
 ## Demo Link
-https://timefaker.sardo.work/
+[https://jsonjs.sardo.work](https://jsonjs.sardo.work/)
 
 ## Project Setup
 ```sh
