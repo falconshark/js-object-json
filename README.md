@@ -1,17 +1,13 @@
 # js-object-json
 
-This template should help get you started developing with Vue 3 in Vite.
+A Web tool for convert Javascript object to JSON 
 
-## Recommended IDE Setup
+Just for myself to covert some Javascript object to JSON format without using CLI.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Demo Link
+https://timefaker.sardo.work/
 
 ## Project Setup
-
 ```sh
 npm install
 ```
