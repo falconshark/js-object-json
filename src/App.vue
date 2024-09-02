@@ -29,7 +29,7 @@
 </template>
 
 <script>
-
+import JSON5 from 'json5';
 export default {
   name: 'App',
   data() {
@@ -41,9 +41,17 @@ export default {
   methods: {
     convertToJson() {
       try {
-        const code = this.code;
-        const jsonString = JSON.stringify(code);
-        this.result = jsonString;
+        let code = this.code;
+        const formatRegax = new RegExp('([a-zA-Z]+)(\:)', 'g');
+        //Check the object string's key is missing "". If it is missed, add it back.
+       if(code.match(formatRegax)){
+         code = code.replace(/([a-zA-Z]+)(\:)/g, '"$1":');
+        }
+        //Replace unnecessary part from javascript object
+        code = code.replace(/(\r\n|\n|\r)/gm, "");
+        code = code.replace(/\}\;/g, "}");
+        code = JSON.stringify(JSON5.parse(code));
+        this.result = code;
       } catch (ex) {
         console.log(ex);
       }
