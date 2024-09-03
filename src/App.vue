@@ -50,7 +50,7 @@ export default {
         //Replace unnecessary part from javascript object
         code = code.replace(/(\r\n|\n|\r)/gm, "");
         code = code.replace(/\}\;/g, "}");
-        code = JSON.stringify(JSON5.parse(code));
+        code = JSON.stringify(JSON5.parse(code), null, 4);
         this.result = code;
       } catch (ex) {
         console.log(ex);
